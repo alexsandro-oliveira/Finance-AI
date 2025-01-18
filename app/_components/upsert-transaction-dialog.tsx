@@ -61,7 +61,7 @@ const formSchema = z.object({
   paymentMethod: z.nativeEnum(TransactionPaymentMethod, {
     required_error: "Método de pagamento é obrigatório",
   }),
-  date: z.date({ required_error: "Data é obrigatória" }),
+  date: z.coerce.date({ required_error: "Data é obrigatória" }),
 });
 
 type FormSchema = z.infer<typeof formSchema>;

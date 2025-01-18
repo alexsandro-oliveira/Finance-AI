@@ -7,17 +7,19 @@ const TransactionsPage = async () => {
   const transactions = await db.transaction.findMany({});
 
   return (
-    <div className="space-y-6 p-6">
-      {/* TITULO E BOTAO */}
-      <div className="flex w-full items-center justify-between">
-        <h1 className="text-2xl font-bold">Transações</h1>
-        <AddTransactionButton />
+    <>
+      <div className="space-y-6 p-6">
+        {/* TITULO E BOTAO */}
+        <div className="flex w-full items-center justify-between">
+          <h1 className="text-2xl font-bold">Transações</h1>
+          <AddTransactionButton />
+        </div>
+        <DataTable
+          columns={transactionColumns}
+          data={JSON.parse(JSON.stringify(transactions))}
+        />
       </div>
-      <DataTable
-        columns={transactionColumns}
-        data={JSON.parse(JSON.stringify(transactions))}
-      />
-    </div>
+    </>
   );
 };
 

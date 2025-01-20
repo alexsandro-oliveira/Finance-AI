@@ -13,7 +13,7 @@ const PercentageItem = ({ icon, title, value }: PercentageItemProps) => {
     <div className="flex items-center justify-between">
       {/* Icone */}
       <div className="flex items-center gap-2">
-        <Badge className="rounded-[8px] bg-muted-foreground/10 hover:bg-muted-foreground/10">
+        <Badge className="rounded-[8px] bg-muted-foreground/10 p-1 hover:bg-muted-foreground/10">
           {icon}
         </Badge>
         <p className="text-sm text-muted-foreground">{title}</p>

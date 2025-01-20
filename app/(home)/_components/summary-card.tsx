@@ -32,7 +32,7 @@ const SummaryCard = ({
               : bg === "secondary"
                 ? "bg-danger/10 hover:bg-danger/10"
                 : "bg-white/10 hover:bg-white/10"
-          } text-${bg}`}
+          } text-${bg} rounded-[8px] p-2`}
         >
           {icon}
         </Badge>

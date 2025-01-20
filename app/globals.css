@@ -14,6 +14,7 @@ body {
 
 @layer base {
   :root {
+    --dark-green: 120 2% 9%;
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: transparent; /* Adjusted to be transparent */
@@ -42,6 +43,7 @@ body {
   }
 
   .dark {
+    --dark-green: 120 2% 9%;
     --background: 20 14.3% 4.1%;
     --foreground: 0 0% 95%;
     --card: transparent; /* Adjusted to be transparent */

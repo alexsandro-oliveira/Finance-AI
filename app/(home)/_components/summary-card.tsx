@@ -1,5 +1,4 @@
 import AddTransactionButton from "@/app/_components/add-transaction-button";
-import { Badge } from "@/app/_components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/app/_components/ui/card";
 import { EyeIcon } from "lucide-react";
 import type { ReactNode } from "react";
@@ -25,17 +24,17 @@ const SummaryCard = ({
       className={`${size === "large" || title === "Investido" ? "bg-white bg-opacity-5" : ""}`}
     >
       <CardHeader className="flex-row items-center gap-2">
-        <Badge
+        <div
           className={`${
             bg === "primary"
               ? "bg-primary/10 hover:bg-primary/10"
               : bg === "secondary"
                 ? "bg-danger/10 hover:bg-danger/10"
                 : "bg-white/10 hover:bg-white/10"
-          } text-${bg} rounded-[8px] p-2`}
+          } text-${bg} rounded-lg p-2`}
         >
           {icon}
-        </Badge>
+        </div>
         <p
           className={`text-sm ${size === "small" ? "text-muted-foreground" : "text-white opacity-70"}`}
         >

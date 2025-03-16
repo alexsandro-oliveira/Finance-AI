@@ -14,6 +14,7 @@ import {
 } from "@/app/_components/ui/alert-dialog";
 import { Button } from "@/app/_components/ui/button";
 import { Trash2Icon } from "lucide-react";
+import { toast } from "sonner";
 
 interface DeleteTransactionButtonProps {
   transactionId: string;
@@ -25,8 +26,10 @@ const DeleteTransactionButton = ({
   const handleConfirmDeleteClick = async () => {
     try {
       await deleteTransaction({ transactionId });
+      toast.success("Transação deletada com sucesso!");
     } catch (error) {
       console.error(error);
+      toast.error("Ocorreu um erro ao deletar a transação.");
     }
   };
 

@@ -39,7 +39,7 @@ const SummaryCard = ({
             {icon}
           </div>
           <p
-            className={`text-sm ${size === "small" ? "text-muted-foreground max-[353px]:text-xs" : "text-white opacity-70"}`}
+            className={`text-sm ${size === "small" ? "text-muted-foreground max-[459px]:text-xs max-[403px]:text-[11px]" : "text-white opacity-70"}`}
           >
             {title}
           </p>
@@ -51,7 +51,7 @@ const SummaryCard = ({
       <CardContent className="flex justify-between p-2">
         <div className="flex flex-row items-center gap-4">
           <p
-            className={`font-bold ${size === "small" ? "text-2xl max-lg:text-xl" : "text-4xl"}`}
+            className={`font-bold ${size === "small" ? "text-2xl max-lg:text-xl max-[501px]:text-lg max-[458px]:text-sm" : "text-4xl"}`}
           >
             {Intl.NumberFormat("pt-BR", {
               style: "currency",

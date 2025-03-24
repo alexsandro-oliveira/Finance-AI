@@ -64,13 +64,24 @@ const AiReportButton = ({ month, hasPremiumPlan }: AiReportButtonProps) => {
               <DialogClose asChild>
                 <Button variant="ghost">Cancelar</Button>
               </DialogClose>
-              <Button
-                onClick={handleGenerateReportClick}
-                disabled={reportIsLoading}
-              >
-                {reportIsLoading && <Loader2Icon className="animate-spin" />}
-                Gerar relatório
-              </Button>
+              {report ? (
+                <Button
+                  onClick={() => {
+                    console.log("download excel");
+                  }}
+                  disabled
+                >
+                  Download em PDF
+                </Button>
+              ) : (
+                <Button
+                  onClick={handleGenerateReportClick}
+                  disabled={reportIsLoading}
+                >
+                  {reportIsLoading && <Loader2Icon className="animate-spin" />}
+                  Gerar relatório
+                </Button>
+              )}
             </DialogFooter>
           </>
         ) : (

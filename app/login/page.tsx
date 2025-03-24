@@ -12,7 +12,7 @@ const LoginPage = async () => {
   }
 
   return (
-    <div className="grid h-full grid-cols-2">
+    <div className="grid h-screen grid-cols-2 max-md:grid-cols-1">
       {/* Left side */}
       <div className="mx-auto flex h-full max-w-[550px] flex-col justify-center p-8">
         <Image
@@ -38,7 +38,7 @@ const LoginPage = async () => {
       </div>
 
       {/* Right side */}
-      <div className="relative h-full w-full">
+      <div className="relative h-full w-full max-md:hidden">
         <Image
           src="/login.png"
           alt="Faça Login"
